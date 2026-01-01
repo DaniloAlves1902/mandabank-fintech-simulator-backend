@@ -1,4 +1,4 @@
-package br.com.connmandakaru.mandabank.service;
+package br.com.connmandakaru.mandabank.service.user;
 
 import br.com.connmandakaru.mandabank.dto.user.UserRequestDTO;
 import br.com.connmandakaru.mandabank.dto.user.UserResponseDTO;
