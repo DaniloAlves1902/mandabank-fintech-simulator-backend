@@ -48,6 +48,22 @@ public class Transaction {
     @Enumerated(EnumType.STRING)
     private TransactionStatus transactionStatus;
 
+    private String failureReason;
+
     @NotNull
     private OffsetDateTime timestamp;
+
+    public void markPending() {
+        this.transactionStatus = TransactionStatus.PENDING;
+        this.timestamp = OffsetDateTime.now();
+    }
+
+    public void complete() {
+        this.transactionStatus = TransactionStatus.COMPLETED;
+    }
+
+    public void fail(String reason) {
+        this.transactionStatus = TransactionStatus.FAILED;
+        this.failureReason = reason;
+    }
 }
