@@ -1,13 +1,13 @@
 package br.com.connmandakaru.mandabank.dto.user;
 
-import br.com.connmandakaru.mandabank.validation.CpfOrCnpjRequired;
+import br.com.connmandakaru.mandabank.validation.ValidCpfOrCnpj;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import org.hibernate.validator.constraints.br.CNPJ;
 import org.hibernate.validator.constraints.br.CPF;
 
-@CpfOrCnpjRequired
+@ValidCpfOrCnpj
 public record UserRequestDTO(
         String id,
 

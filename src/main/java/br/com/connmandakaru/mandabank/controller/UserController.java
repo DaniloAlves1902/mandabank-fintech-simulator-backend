@@ -2,7 +2,7 @@ package br.com.connmandakaru.mandabank.controller;
 
 import br.com.connmandakaru.mandabank.dto.user.UserRequestDTO;
 import br.com.connmandakaru.mandabank.dto.user.UserResponseDTO;
-import br.com.connmandakaru.mandabank.service.UserService;
+import br.com.connmandakaru.mandabank.service.user.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

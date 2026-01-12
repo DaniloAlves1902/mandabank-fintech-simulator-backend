@@ -9,9 +9,8 @@ import java.lang.annotation.*;
 @Constraint(validatedBy = CpfOrCnpjValidator.class)
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface CpfOrCnpjRequired {
-    String message() default "It is mandatory to provide your CPF (Brazilian individual taxpayer registration number) or" +
-            " CNPJ (Brazilian company taxpayer registration number).";
+public @interface ValidCpfOrCnpj {
+    String message() default "Invalid CPF/CNPJ information. / Informações de CPF/CNPJ inválidas.";
 
     Class<?>[] groups() default {};
 

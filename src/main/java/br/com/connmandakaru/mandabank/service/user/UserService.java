@@ -9,6 +9,7 @@ import br.com.connmandakaru.mandabank.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -27,6 +28,7 @@ public class UserService {
                 .toList();
     }
 
+    @Transactional
     public UserResponseDTO createUser(UserRequestDTO data) {
         User user = userMapper.toEntity(data);
 
